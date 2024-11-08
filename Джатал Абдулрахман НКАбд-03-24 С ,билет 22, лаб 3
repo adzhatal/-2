@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+const char* getCardName(int rank) {
+    switch (rank) {
+        case 11: return "Jack";
+        case 12: return "Queen";
+        case 13: return "King";
+        case 14: return "Ace";
+        default: return "Invalid rank";
+    }
+}
+
+int main() {
+    int rank;
+
+    printf("Enter the card rank number (11-14): ");
+    scanf("%d", &rank);
+
+    const char* cardName = getCardName(rank);
+    printf("The card name is: %sn", cardName);
+
+    return 0;
+}
